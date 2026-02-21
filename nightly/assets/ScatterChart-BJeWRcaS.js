@@ -1,0 +1,18 @@
+import{j as o}from"./iframe-BclzIqLN.js";import{useMDXComponents as e}from"./index-C905Yc-m.js";import{M as p,C as i}from"./blocks-B5DwqLl1.js";import"./Tag-BOdn4VYm.js";import"./index-DMn-V0Tk.js";import{C as a}from"./ControlsWithNote-CmUQIF7m.js";import{D as x}from"./DocsHeader-Bv9mYQAO.js";import{F as h}from"./CommandsAndQueries-C-6YnLjZ.js";import{M as l,a as j}from"./LegendConfig-DEaM07kb.js";import{C as m,D as n,W as d,L as f,a as c,b as C}from"./ScatterChart.stories-CZNJtI80.js";import"./preload-helper-PPVm8Dsz.js";import"./information-BdMHs198.js";import"./sys-enter-2-C5ziAGW-.js";import"./alert-BWh7aIvC.js";import"./index-CnVdbwVS.js";import"./index-xMZLjYER.js";import"./Link-DPzQ2XbU.js";import"./copy-0OOzyCzB.js";import"./copy-D_MUueeP.js";import"./GitHub-Mark-ZtjZqui5.js";import"./TableOfContent-CBpvimzU.js";import"./index-uVgUJkPs.js";import"./index-OKRhEBZf.js";import"./index-C8ShhJNW.js";import"./index-5TTuORsb.js";import"./index-CJHMJsmF.js";import"./AvatarSize-BtKTMFJ5.js";import"./employee-Cdo2Ur2Z.js";import"./addCustomCSSWithScoping-Dte7M2sk.js";import"./DemoProps-D4SiuPdp.js";import"./ThemingParameters-pyhX3s39.js";import"./YAxisTicks-BukkLK4r.js";import"./ChartContainer-DTXL8BE-.js";import"./index-B-2M8oTR.js";import"./debounce-D7W5PopO.js";import"./useTooltipFormatter-DKthZSHQ.js";import"./staticProps-DG5SYf_M.js";import"./useLongestYAxisLabel-CaeCS1HB.js";import"./react-content-loader.es-Vl50Yiln.js";import"./Scatter-B-7GVWrP.js";import"./useIsRTL-BUkTWivW.js";function s(r){const t={h2:"h2",h3:"h3",...e(),...r.components};return o.jsxs(o.Fragment,{children:[o.jsx(p,{of:m}),`
+`,o.jsx(x,{of:m,isChart:!0}),`
+`,o.jsx(t.h2,{id:"example",children:"Example"}),`
+`,o.jsx(i,{of:n}),`
+`,o.jsx(t.h2,{id:"properties",children:"Properties"}),`
+`,o.jsx(a,{of:n}),`
+`,o.jsx("br",{}),`
+`,o.jsx("br",{}),`
+`,o.jsx(t.h2,{id:"more-examples",children:"More Examples"}),`
+`,o.jsx(t.h3,{id:"with-custom-color",children:"With Custom Color"}),`
+`,o.jsx(i,{of:d}),`
+`,o.jsx(t.h3,{id:"loading-placeholder",children:"Loading Placeholder"}),`
+`,o.jsx(i,{of:f}),`
+`,o.jsx(l,{of:c}),`
+`,o.jsx(j,{of:C}),`
+`,o.jsx("br",{}),`
+`,o.jsx("br",{}),`
+`,o.jsx(h,{})]})}function no(r={}){const{wrapper:t}={...e(),...r.components};return t?o.jsx(t,{...r,children:o.jsx(s,{...r})}):s(r)}export{no as default};
