@@ -164,15 +164,16 @@ import { Device } from '@ui5/webcomponents-react-base/Device';
 
 ### Package Structure
 
-| Package            | npm Name                              | Description                                   |
-| ------------------ | ------------------------------------- | --------------------------------------------- |
-| `main`             | `@ui5/webcomponents-react`            | React wrappers + custom components            |
-| `base`             | `@ui5/webcomponents-react-base`       | Core utilities, hooks, wrapper infrastructure |
-| `charts`           | `@ui5/webcomponents-react-charts`     | Chart components (recharts-based)             |
-| `compat`           | `@ui5/webcomponents-react-compat`     | Legacy components                             |
-| `cli`              | `@ui5/webcomponents-react-cli`        | Wrapper generation, codemods                  |
-| `cypress-commands` | `@ui5/webcomponents-cypress-commands` | Testing utilities                             |
-| `ai`               | `@ui5/webcomponents-ai-react`         | AI component wrappers                         |
+| Package            | npm Name                              | Description                                          |
+| ------------------ | ------------------------------------- | ---------------------------------------------------- |
+| `main`             | `@ui5/webcomponents-react`            | React wrappers + custom components                   |
+| `base`             | `@ui5/webcomponents-react-base`       | Core utilities, hooks, wrapper infrastructure        |
+| `charts`           | `@ui5/webcomponents-react-charts`     | Chart components (recharts-based)                    |
+| `compat`           | `@ui5/webcomponents-react-compat`     | Legacy components                                    |
+| `cli`              | `@ui5/webcomponents-react-cli`        | Wrapper generation, codemods                         |
+| `cypress-commands` | `@ui5/webcomponents-cypress-commands` | Testing utilities                                    |
+| `ai`               | `@ui5/webcomponents-ai-react`         | AI component wrappers                                |
+| `mcp-server`       | `@ui5/webcomponents-react-mcp`        | MCP server exposing component APIs/docs to AI agents |
 
 ### Main Package Structure
 
@@ -213,11 +214,23 @@ Use **yarn** (not pnpm). For tools, use project binaries via yarn (e.g., `yarn c
 ```bash
 yarn start           # Storybook (localhost:6006)
 yarn test            # Cypress component tests
+yarn test:pw         # Playwright component tests
 yarn lint            # ESLint
 yarn prettier:all    # Format all files
 ```
 
-## Tests (Cypress Component Tests)
+## Tests
+
+See also [Testing guide](docs/knowledge-base/Testing.mdx) for more details.
+
+**Always write new tests in Playwright.** For large changes to existing Cypress tests, migrate the test to Playwright instead of updating the Cypress version.
+
+The repo uses **two** component-test runners side by side:
+
+- **Cypress** — `ComponentName.cy.tsx` co-located next to `index.tsx`. Run with `yarn test` (or `yarn cypress`). Config: `cypress.config.ts`.
+- **Playwright** — `ComponentName.spec.tsx` under a `test/` subfolder (`packages/main/src/components/<Component>/test/*.spec.tsx`). Run with `yarn test:pw` (`yarn test:pw:open` for the UI). Config: `playwright.config.ts`.
+
+The section below documents the Cypress setup; the same web-component selector/shadow-DOM principles apply to Playwright (its locators pierce shadow roots by default).
 
 ### File Structure
 
